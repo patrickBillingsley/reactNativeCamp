@@ -120,7 +120,7 @@ export const fetchPromotions = () => dispatch => {
             }
         },
         error => {
-            const errMess = newError(error.message);
+            const errMess = new Error(error.message);
             throw errMess;
     })
     .then(response => response.json())
